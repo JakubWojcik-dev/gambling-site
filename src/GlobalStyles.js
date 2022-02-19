@@ -62,6 +62,7 @@ export const GlobalStyles = createGlobalStyle`
     --vip-opal: #e82179;
     --vip-text-opal: #bd658d;
     --text-gray: #f0f0f0;
+    --text-hover:#cacaca;
 }
 
 `
