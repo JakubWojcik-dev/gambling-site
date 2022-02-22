@@ -13,15 +13,12 @@ background-color: var(--black-ter);
 
 `
 export const TestDiv2 = styled.div`
-position: absolute;
-width: 250px;
+position: fixed;
+width: 350px;
 height: 100%;
 top: 0px;
-left: -250px;
-background-color: var(--danger);
-transition: transform 1.5s linear;
-
-transform: translateX(-250px);
+left: 0px;
+background-color: var(--black-ter);
 
 `
 export const Button = styled.button`
@@ -36,15 +33,15 @@ background-color: var(--light);
     background-color: gray;
     
 }
-:focus{
+//:focus{
 
-${Wrapper} &{
-    transition: transform 0.45s linear;
-    transform: translateX(350px);
-    background-color: blue;
-}    
-width:50px;
-height:30px;
+//${Wrapper} &{
+//    transition: transform 0.45s linear;
+//    transform: translateX(350px);
+//    background-color: blue;
+//}    
+//width:50px;
+//height:30px;
 //background-color: green;
-}
+//}
 `
