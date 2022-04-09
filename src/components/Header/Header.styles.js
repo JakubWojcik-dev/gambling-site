@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 export const Wrapper = styled.div`
 position: sticky;
 top: 0;
@@ -10,7 +10,10 @@ background-color: var(--grey-main);
 color: var(--text-gray);
 
 `
+export const Linked = styled(Link)`
+text-decoration: none;
 
+`
 export const ContentHeader = styled.div`
 
 display: flex;
@@ -29,7 +32,8 @@ align-items: center;
 `
 export const SingleItem = styled.div`
 
-
+text-decoration: none;
+cursor: pointer;
 display: flex;
 font-size: 19px;
 height: 85px;

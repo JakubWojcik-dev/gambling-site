@@ -1,10 +1,12 @@
 import React from "react";
 import Logo from "../../logo.svg"
 import { Wrapper, ContentHeader, Img, HeaderContext,Test,SingleItem, ButtonLog,Main, ContentButton, ButtonReg } from "./Header.styles";
-
+import { Linked } from "./Header.styles";
+import Sidebar from "../Sidebar";
 
 const Header = () =>{
     return(
+       
         <Main>
 
             <Wrapper>
@@ -13,11 +15,11 @@ const Header = () =>{
 
                     <Img src={Logo}/>
                     
-                    <SingleItem>Wheel</SingleItem>
-                    <SingleItem>Roulette</SingleItem>
-                    <SingleItem>Crash</SingleItem>
-                    <SingleItem>Duels</SingleItem>
-                    <SingleItem>Casino</SingleItem>
+                    <Linked to="/wheel"><SingleItem>Wheel</SingleItem></Linked>
+                    <Linked to="/roulette"><SingleItem>Roulette</SingleItem></Linked>
+                    <Linked to="/crash"><SingleItem>crash</SingleItem></Linked>
+                    <Linked to="/duels"><SingleItem>duels</SingleItem></Linked>
+                    <Linked to="/casino"><SingleItem>casino</SingleItem></Linked>
 
                 </ContentHeader>
 
@@ -31,19 +33,26 @@ const Header = () =>{
             </Wrapper>
 
             <HeaderContext>
+                <Linked to="/affiliates"><SingleItem>Affiliates</SingleItem></Linked>
+                <Linked to="/Rrwards"><SingleItem>Rewards</SingleItem></Linked>
+                <Linked to="fFairness"><SingleItem>Fairness</SingleItem></Linked>
+                <Linked to="lLeaderboards"><SingleItem>Leaderboards</SingleItem></Linked>
+                <Linked to="/vip-Program"><SingleItem>VIP Program</SingleItem></Linked>
+                   
+                    
+                    
 
-                    <SingleItem>Affiliates</SingleItem>
-                    <SingleItem>Rewards</SingleItem>
-                    <SingleItem>Fairness</SingleItem>
-                    <SingleItem>Leaderboards</SingleItem>
-                    <SingleItem>VIP Program</SingleItem>
 
             </HeaderContext>
-
-            <Test/>
+            
+            
+            
+            
+            
+            
 
         </Main>
-    
+        
     )
 }
 
