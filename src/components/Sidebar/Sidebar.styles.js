@@ -12,6 +12,12 @@ background-color: var(--black-ter);
 
 
 `
+export const TestDiv = styled.div`
+width:300px;
+height:300px;
+background-color: var(--black-ter);
+
+`
 export const TestDiv2 = styled.div`
 position: fixed;
 width: 350px;

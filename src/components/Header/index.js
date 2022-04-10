@@ -3,19 +3,20 @@ import Logo from "../../logo.svg"
 import { Wrapper, ContentHeader, Img, HeaderContext,Test,SingleItem, ButtonLog,Main, ContentButton, ButtonReg } from "./Header.styles";
 import { Linked } from "./Header.styles";
 import Sidebar from "../Sidebar";
-
+import Wheel from "../Wheel";
+import { Link,BrowserRouter as Router } from "react-router-dom";
 const Header = () =>{
     return(
        
         <Main>
-
+            
             <Wrapper>
 
                 <ContentHeader>
 
                     <Img src={Logo}/>
                     
-                    <Linked to="/wheel"><SingleItem>Wheel</SingleItem></Linked>
+                    <Link to="/wheel" ><SingleItem>Wheel</SingleItem></Link>
                     <Linked to="/roulette"><SingleItem>Roulette</SingleItem></Linked>
                     <Linked to="/crash"><SingleItem>crash</SingleItem></Linked>
                     <Linked to="/duels"><SingleItem>duels</SingleItem></Linked>

@@ -8,7 +8,7 @@ width: 100%;
 height: 85px;
 background-color: var(--grey-main);
 color: var(--text-gray);
-
+margin-left: 265px;
 `
 export const Linked = styled(Link)`
 text-decoration: none;
@@ -20,6 +20,7 @@ display: flex;
 justify-content: center;
 width:80%;
 align-items: center;
+margin-right: 265px;
 
 `
 export const ContentButton = styled.div`
@@ -28,7 +29,7 @@ display: flex;
 justify-content: center;
 width:20%;
 align-items: center;
-
+margin-right: 265px;
 `
 export const SingleItem = styled.div`
 
@@ -88,7 +89,7 @@ export const HeaderContext = styled.div`
 position: sticky;
 top: 85px;
 display: flex;
-
+margin-left: 265px;
 align-items: center;
 width: 100%;
 height: 52px;

@@ -1,22 +1,19 @@
 import React, {useState} from "react";
-import { Button, Wrapper,TestDiv2 } from "./Sidebar.styles";
-import { animated, useTransition} from 'react-spring'
+import { Button, Wrapper,TestDiv2,TestDiv } from "./Sidebar.styles";
+import { animated, useTransition, useSpring} from 'react-spring'
 const Sidebar = () =>{
 
-    const [hide, setHide] = useState(true)
-    const transition = useTransition(hide, {
-        from: { x:-265, y: 0
-                },
-        enter: {x:0, y: 0 },
-        leave: {x:-265, y: 0 },
-    })
+    const [hide, setHide] = useState(false)
+    
+    const props = useSpring({ x: hide ? 0 : 265 })
+    
+    
     return(
         
         <div>
             
-            {transition((style, item) =>
-            item ? <Wrapper><Button onClick={() => setHide(!hide)}/></Wrapper> : ""
-            )}
+            
+            <animated.div style={props}><Wrapper><Button onClick={() => setHide(!hide)}/></Wrapper></animated.div>
             <Button onClick={() => setHide(!hide)}/>
             
            
