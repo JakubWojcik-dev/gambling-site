@@ -1,11 +1,13 @@
-import React from "react";
+import React,{useState} from "react";
 import Logo from "../../logo.svg"
 import { Wrapper, ContentHeader, Img, HeaderContext,Test,SingleItem, ButtonLog,Main, ContentButton, ButtonReg } from "./Header.styles";
 import { Linked } from "./Header.styles";
 import Sidebar from "../Sidebar";
 import Wheel from "../Wheel";
 import { Link,BrowserRouter as Router } from "react-router-dom";
+import Key from "../../key.png"
 const Header = () =>{
+    
     return(
        
         <Main>
@@ -14,22 +16,25 @@ const Header = () =>{
 
                 <ContentHeader>
 
-                    <Img src={Logo}/>
+                    <Img />
                     
-                    <Link to="/wheel" ><SingleItem>Wheel</SingleItem></Link>
+                    <Linked to="/wheel" ><SingleItem>Wheel</SingleItem></Linked>
                     <Linked to="/roulette"><SingleItem>Roulette</SingleItem></Linked>
                     <Linked to="/crash"><SingleItem>crash</SingleItem></Linked>
                     <Linked to="/duels"><SingleItem>duels</SingleItem></Linked>
                     <Linked to="/casino"><SingleItem>casino</SingleItem></Linked>
 
                 </ContentHeader>
-
+                
                 <ContentButton>
-
                     <ButtonLog>Log in</ButtonLog>
-                    <ButtonReg>Register</ButtonReg>
+                    <ButtonReg><img src={Key} height="20px" width="20px"></img>Register</ButtonReg> 
+                    
+                    
+                   
 
                 </ContentButton>
+               
 
             </Wrapper>
 

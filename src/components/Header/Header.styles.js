@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 export const Wrapper = styled.div`
-position: sticky;
+position: fixed;
 top: 0;
 display: flex;
 width: 100%;
 height: 85px;
 background-color: var(--grey-main);
 color: var(--text-gray);
-margin-left: 265px;
+
 `
 export const Linked = styled(Link)`
 text-decoration: none;
@@ -20,7 +20,11 @@ display: flex;
 justify-content: center;
 width:80%;
 align-items: center;
-margin-right: 265px;
+@media (max-width: 912px) {
+    opacity: 0;
+    pointer-events: none;
+    width: 60vmin;
+  }
 
 `
 export const ContentButton = styled.div`
@@ -29,7 +33,7 @@ display: flex;
 justify-content: center;
 width:20%;
 align-items: center;
-margin-right: 265px;
+margin-right: 20px;
 `
 export const SingleItem = styled.div`
 
@@ -55,6 +59,8 @@ export const ButtonLog = styled.button`
 
 height: 35px;
 width: 115px;
+min-width: 85px;
+min-height: 30px;
 font-size: 16px;
 color: var(--text-gray);
 text-align: center;
@@ -63,33 +69,38 @@ align-items: center;
 background-color: var(--red);
 margin: 0 10px;
 border: none;
-
+border-radius: 0.5vmin;
 `
 export const ButtonReg = styled.button`
 
+display: flex;
 height: 35px;
 width: 135px;
+min-width: 100px;
+min-height: 30px;
 font-size: 16px;
 color: var(--grey-lighter);
 text-align: center;
 margin: 0 10px;
-justify-content: center;
+padding: 0 10px;
+justify-content: space-around;
 align-items: center;
+//text-align: center;
 background-color: var(--white);
 border: none;
-
+border-radius: 0.5vmin;
 `
 
-export const Img = styled.div`
+export const Img = styled.img`
 
 
 `
 
 export const HeaderContext = styled.div`
-position: sticky;
+position: fixed;
 top: 85px;
 display: flex;
-margin-left: 265px;
+//margin-left: 265px;
 align-items: center;
 width: 100%;
 height: 52px;
