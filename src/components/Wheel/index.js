@@ -5,7 +5,7 @@ const Wheel = () => {
     return(
         <div>
             <Div>
-             <h1>Wheel test</h1>
+             <h1>Wheel test one</h1>
             </Div>
            
         </div>
